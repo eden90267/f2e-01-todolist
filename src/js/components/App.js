@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
+import {Route} from 'react-router-dom'
+import TodoList from './TodoList'
 
 const App = () =>
-  <div className="alert alert-primary" role="alert">
-    Hello React！
-  </div>;
+  <Route path="/" component={TodoList}/>
 
-export default App;
+export default App
