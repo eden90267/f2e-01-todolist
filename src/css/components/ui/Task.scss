@@ -1,0 +1,10 @@
+.task {
+  padding-left: 14px !important;
+  &.active {
+    background-color: #FFF2DC !important;
+    color: #000 !important;
+  }
+  & > .task-content > li:first-child {
+    margin-right: 21px;
+  }
+}
