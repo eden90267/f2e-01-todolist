@@ -1,5 +1,4 @@
 import {createStore, combineReducers, applyMiddleware} from "redux";
-import {colors, sort} from './reducer';
 
 const LOCAL_STORAGE_KEY = 'todolist-redux-store';
 
