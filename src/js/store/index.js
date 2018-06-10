@@ -1,10 +1,44 @@
 import {createStore, combineReducers, applyMiddleware} from 'redux'
+import {editable, todos} from './reducer'
 
 const LOCAL_STORAGE_KEY = 'todos'
 
 const stateData = {
   editable: false,
-  todos: []
+  todos: [
+    {
+      id: 1,
+      title: 'Type Something Here...',
+      deadline: '5/14',
+      file: 'https://i.imgur.com/SrU55KT.gif',
+      comment: 'Something description',
+      primary: true
+    },
+    {
+      id: 2,
+      title: 'Type Something Here...',
+      deadline: '',
+      file: 'https://i.imgur.com/SrU55KT.gif',
+      comment: 'Something description',
+      primary: true
+    },
+    {
+      id: 3,
+      title: 'Type Something Here...',
+      deadline: '6/18',
+      file: '',
+      comment: '',
+      primary: false
+    },
+    {
+      id: 4,
+      title: 'Type Something Here...',
+      deadline: '',
+      file: 'https://i.imgur.com/SrU55KT.gif',
+      comment: '',
+      primary: false
+    }
+  ]
 }
 
 const logger = store => next => action => {
@@ -26,7 +60,7 @@ const saver = store => next => action => {
 
 const storeFactory = (initialState = stateData) =>
   applyMiddleware(logger, saver)(createStore)(
-    combineReducers({}),
+    combineReducers({editable, todos}),
     (localStorage[LOCAL_STORAGE_KEY]) ?
       JSON.parse(localStorage[LOCAL_STORAGE_KEY]) :
       initialState

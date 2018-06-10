@@ -1,10 +1,35 @@
 .task {
   padding-left: 14px !important;
+  background-color: #C8C8C8;
   &.active {
     background-color: #FFF2DC !important;
     color: #000 !important;
   }
-  & > .task-content > li:first-child {
-    margin-right: 21px;
+  & > .task_content {
+    & hr {
+      margin-left: -49px;
+      margin-right: -96px;
+    }
+    & > li:first-child {
+      margin-right: 21px;
+    }
+  }
+  & > .task_action {
+    margin-left: -14px !important;
+    margin-right: -20px !important;
+    margin-bottom: -12px !important;
+    & button {
+      height: 50px;
+      font-size: 1.1rem;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      &.cancel {
+        border-bottom-right-radius: 0;
+        color: #D0021B;
+      }
+      &.save {
+        border-bottom-left-radius: 0;
+      }
+    }
   }
 }
