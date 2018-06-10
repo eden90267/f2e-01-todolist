@@ -6,7 +6,7 @@ import Pencil from 'react-icons/lib/fa/pencil'
 import Calendar from 'react-icons/lib/fa/calendar'
 import File from 'react-icons/lib/fa/file'
 import Comment from 'react-icons/lib/fa/comment'
-import {changeEditable} from "../../actions";
+import {changeEditable} from "../actions";
 
 const EditTask = ({onCancel = f => f}) =>
   <ul className="list-group">

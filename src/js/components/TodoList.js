@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import Menu from './Menu'
 import AddTask from './AddTask'
 import TaskList from './TaskList'
-import {changeEditable} from "../../actions";
+import {changeEditable} from "../actions";
 
 
 const TodoList = ({data, editable, onFocus}) => (
